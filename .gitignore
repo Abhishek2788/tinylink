@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# environment Variables
+.env
+
 # next.js
 /.next/
 /out/
