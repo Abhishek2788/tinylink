@@ -1,47 +1,10 @@
 @import "tailwindcss";
 
-/* :root{
-    background: #000;
-} */
- 
-/* Smooth theme transition */
-html {
-  transition: background-color 0.3s ease, color 0.3s ease;
+.hide-scrollbar {
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE/Edge */
 }
 
-/* Dark Mode Base */
-html.dark {
-  background-color: #0f0f0f;
-  color: #f5f5f5;
-}
-
-/* Table Styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table thead {
-  background: #f3f3f3;
-}
-
-html.dark table thead {
-  background: #1f1f1f;
-}
-
-table th,
-table td {
-  padding: 12px 16px;
-  text-align: left;
-  /* border-bottom: 1px solid #e5e5e5; */
-}
-
-html.dark table th,
-html.dark table td {
-  border-color: #333;
-}
-
-
-html.dark table tbody tr:hover {
-  background: #1a1a1a;
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;               /* Chrome/Safari */
 }
