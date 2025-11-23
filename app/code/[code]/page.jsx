@@ -1,5 +1,6 @@
 import React from "react";
 
+export const dynamic = "force-dynamic";
 export default async function Page(context) {
   const { code } = await context.params;
 
