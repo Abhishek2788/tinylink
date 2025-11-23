@@ -12,3 +12,12 @@ export default function ClientDate({ value }) {
 
   return <span>{formatted || "…"}</span>;
 }
+
+
+
+// "use client";
+
+// export default function ClientDate({ value }) {
+//   if (!value) return "—";
+//   return new Date(value).toLocaleString();
+// }

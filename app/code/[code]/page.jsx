@@ -103,7 +103,8 @@ export default async function Page(context) {
             Created At
           </p>
           <p className="text-lg text-gray-900 dark:text-gray-200">
-            {new Date(link.createdAt).toLocaleString()}
+            <ClientDate value={link.createdAt} />
+            {/* {new Date(link.createdAt).toLocaleString()} */}
           </p>
         </div>
       </section>
