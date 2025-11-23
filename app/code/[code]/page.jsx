@@ -1,6 +1,6 @@
+import ClientDate from "@/components/ClientDate";
 import React from "react";
 
-export const dynamic = "force-dynamic";
 export default async function Page(context) {
   const { code } = await context.params;
 
@@ -90,9 +90,10 @@ export default async function Page(context) {
             Last Clicked
           </p>
           <p className="text-lg text-gray-900 dark:text-gray-200">
-            {link.lastClicked
+            <ClientDate value={link.lastClicked} />
+            {/* {link.lastClicked
               ? new Date(link.lastClicked).toLocaleString()
-              : "Never"}
+              : "Never"} */}
           </p>
         </div>
 

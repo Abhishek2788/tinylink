@@ -94,7 +94,7 @@ export default function AddForm({ onAdd }) {
           text-white dark:text-black 
           shadow-lg hover:shadow-xl 
           transition-all duration-300 active:scale-95 
-          disabled:opacity-50
+          disabled:opacity-50 cursor-pointer
         "
       >
         {loading ? "Creating…" : "Create Short URL"}
