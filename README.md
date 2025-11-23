@@ -11,10 +11,25 @@ TinyLink is a modern, sleek URL shortener built with **Next.js**, **React**, and
   - Last clicked timestamp  
   - Created at timestamp  
 - Delete links directly from the dashboard.  
-- Clean, responsive UI with light/dark mode support.  
+- Clean, responsive UI.  
 - Notifications for actions (success/error) using `react-hot-toast`.
 
 ---
+
+## Environment Variables
+DATABASE_URL='Your Database URL'
+NEXT_PUBLIC_BASE_URL='Your Website URL'
+APP_VERSION = 1.0
+
+---
+
+## API Overview
+Method	Endpoint	        Description
+POST	/api/links	        Create link (409 if code exists)
+GET	/api/links	          List all links 
+GET	/api/links/:code	    Stats for one code
+DELETE	/api/links/:code	Delete link
+GET	/healthz	            returns 200
 
 ## Screenshots 🖼️
 ![alt text](image-1.png)
