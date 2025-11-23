@@ -9,7 +9,7 @@ function truncate(url, n = 60) {
 export default function LinksTable({ links = [], onDelete }) {
   return (
     <div className="overflow-x-auto w-full hide-scrollbar">
-      <table className="min-w-[700px] w-full border-collapse text-sm md:text-base">
+      <table className="w-full border-collapse text-sm md:text-base">
         <thead>
           <tr
             className="
@@ -17,13 +17,13 @@ export default function LinksTable({ links = [], onDelete }) {
               backdrop-blur-xl 
               text-gray-900 dark:text-gray-200 
               border-b border-white/20 dark:border-white/10
-              shadow-sm
+              shadow-sm flex justify-between
             "
           >
             <th className="p-4 font-semibold">Short Code</th>
-            <th className="p-4 font-semibold">Target URL</th>
-            <th className="p-4 font-semibold">Clicks</th>
-            <th className="p-4 font-semibold">Last Clicked</th>
+            <th className="p-4 font-semibold max-sm:hidden">Target URL</th>
+            <th className="p-4 font-semibold max-sm:hidden">Clicks</th>
+            <th className="p-4 font-semibold max-sm:hidden">Last Clicked</th>
             <th className="p-4 font-semibold">Actions</th>
           </tr>
         </thead>
@@ -38,7 +38,7 @@ export default function LinksTable({ links = [], onDelete }) {
                 backdrop-blur-xl
                 transition-all 
                 hover:bg-white/50 dark:hover:bg-white/30
-                hover:shadow-md mt-1
+                hover:shadow-md mt-1 flex justify-between
               "
             >
               {/* Short Code */}
@@ -54,7 +54,7 @@ export default function LinksTable({ links = [], onDelete }) {
               </td>
 
               {/* Target URL */}
-              <td className="p-4 text-gray-800 dark:text-gray-200 break-all">
+              <td className="p-4 text-gray-800 dark:text-gray-200 break-all max-sm:hidden">
                 <a
                   href={link.longUrl}
                   target="_blank"
@@ -66,12 +66,12 @@ export default function LinksTable({ links = [], onDelete }) {
               </td>
 
               {/* Clicks */}
-              <td className="p-4 font-semibold text-gray-900 dark:text-gray-100">
+              <td className="p-4 font-semibold text-gray-900 dark:text-gray-100 max-sm:hidden">
                 {link.clicks}
               </td>
 
               {/* Last Clicked */}
-              <td className="p-4 text-gray-600 dark:text-gray-400">
+              <td className="p-4 text-gray-600 dark:text-gray-400 max-sm:hidden">
                 {link.lastClicked
                   ? new Date(link.lastClicked).toLocaleString()
                   : "—"}
